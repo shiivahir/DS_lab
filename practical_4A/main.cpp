@@ -4,83 +4,62 @@
 
 #include <iostream>
 #include <stack>
-#include <string>
 #include <cctype>
-
 using namespace std;
 
-// Return precedence of an operator
-int precedence(char op) {
-    if (op == '+' || op == '-') return 1;
-    if (op == '*' || op == '/') return 2;
+int priority(char c)
+{
+    if (c == '^' || c == '$') return 3;
+    if (c == '*' || c == '/') return 2;
+    if (c == '+' || c == '-') return 1;
     return 0;
 }
 
-// Check if character is one of our operators
-bool isOperator(char c) {
-    return c == '+' || c == '-' || c == '*' || c == '/';
-}
+int main()
+{
+    string infix, postfix = "";
+    stack<char> a;
 
-// Convert an infix expression (like A+B*C) to postfix (like ABC*+)
-string infixToPostfix(const string &expr) {
-    stack<char> st;      // stack for operators and parentheses
-    string postfix;      // result string
+    cout << "Enter infix: ";
+    cin >> infix;
 
-    for (char c : expr) {
-        // Ignore spaces
-        if (isspace(static_cast<unsigned char>(c))) continue;
-
-        // If operand (letter or digit), add directly to output
-        if (isalnum(static_cast<unsigned char>(c))) {
+    for (char c : infix)
+    {
+        if (isalnum(c))
             postfix += c;
-        }
-        // If '(', push to stack
-        else if (c == '(') {
-            st.push(c);
-        }
-        // If ')', pop until '('
-        else if (c == ')') {
-            while (!st.empty() && st.top() != '(') {
-                postfix += st.top();
-                st.pop();
+
+        else if (c == '(')
+            a.push(c);
+
+        else if (c == ')')
+        {
+            while (a.top() != '(')
+            {
+                postfix += a.top();
+                a.pop();
             }
-            if (!st.empty() && st.top() == '(') {
-                st.pop(); // remove '('
-            } else {
-                // Mismatched parentheses
-                return "Error: mismatched parentheses";
-            }
+            a.pop();
         }
-        // If operator, pop higher/equal precedence operators first
-        else if (isOperator(c)) {
-            while (!st.empty() && isOperator(st.top()) && precedence(st.top()) >= precedence(c)) {
-                postfix += st.top();
-                st.pop();
+
+        else
+        {
+            while (!a.empty() && a.top() != '(' &&
+                   priority(a.top()) >= priority(c))
+            {
+                postfix += a.top();
+                a.pop();
             }
-            st.push(c);
-        }
-        else {
-            // Unknown character
-            return string("Error: invalid character '") + c + "'";
+            a.push(c);
         }
     }
 
-    // Pop remaining operators
-    while (!st.empty()) {
-        if (st.top() == '(') return "Error: mismatched parentheses";
-        postfix += st.top();
-        st.pop();
+    while (!a.empty())
+    {
+        postfix += a.top();
+        a.pop();
     }
 
-    return postfix;
-}
+    cout << "Postfix: " << postfix << endl;
 
-int main() {
-    cout << "Enter infix expression (use letters/digits and + - * / with parentheses):\n";
-    string line;
-    getline(cin, line);
-
-    string result = infixToPostfix(line);
-    cout << "Postfix: " << result << '\n';
     return 0;
 }

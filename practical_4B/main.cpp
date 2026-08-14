@@ -6,9 +6,39 @@
 //
 
 #include <iostream>
+#include <sstream>
+#include <stack>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return EXIT_SUCCESS;
+int main()
+{
+    string exp, x;
+    stack<double> s;
+
+    cout << "Enter postfix: ";
+    getline(cin, exp);
+
+    stringstream ss(exp);
+
+    while (ss >> x)
+    {
+        if (x != "+" && x != "-" && x != "*" && x != "/" && x != "^" && x != "$")
+        {
+            s.push(stod(x));
+        }
+        else
+        {
+            double b = s.top(); s.pop();
+            double a = s.top(); s.pop();
+
+            if (x == "+") s.push(a + b);
+            if (x == "-") s.push(a - b);
+            if (x == "*") s.push(a * b);
+            if (x == "/") s.push(a / b);
+        }
+    }
+
+    cout << "Result: " << s.top() << endl;
+
+    return 0;
 }
