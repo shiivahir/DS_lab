@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <stack>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -35,6 +36,7 @@ int main()
             if (x == "-") s.push(a - b);
             if (x == "*") s.push(a * b);
             if (x == "/") s.push(a / b);
+            if (x == "^" || x == "$") s.push(pow(a, b));
         }
     }
 
