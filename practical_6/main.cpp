@@ -15,7 +15,7 @@ struct Node {
 
 struct Node *head = NULL;
 
-void insertBegginnig(int value)
+void insertBeginnig(int value)
 {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
     if (!newNode) return;
