@@ -7,52 +7,72 @@
 		<key>practical 1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>7</integer>
 		</dict>
 		<key>practical2_B.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>8</integer>
+		</dict>
+		<key>practical_10.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>practical_11.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 		<key>practical_3.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>1</integer>
 		</dict>
 		<key>practical_4A.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>practical_4B.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>practical_5A.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>4</integer>
 		</dict>
 		<key>practical_5B.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>5</integer>
 		</dict>
 		<key>practical_6.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>practical_6A.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>14</integer>
 		</dict>
 		<key>practical_7.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>10</integer>
+		</dict>
+		<key>practical_8.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>practical_9.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>practicals.xcscheme_^#shared#^_</key>
 		<dict>
@@ -62,7 +82,72 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>17430EDC3009FAC700690D13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17430EE7300A0AD100690D13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>174E7AC8301A8B1F0063CB83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>175EE84A30789829007A05B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1765EE5F30094208006300E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1765EE6D300942C0006300E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1765EE78300943E1006300E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17C09B503081CA930085BADD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17C09B5B3081CABF0085BADD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17C09B663081CAD70085BADD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17C09B713081CAE50085BADD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17F09CCA3053CBB9000242D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17F09CE03053CC98000242D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17F19D3C302EE93500703C5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
